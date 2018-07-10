@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width">
+    <title>Simulador de Tesouro Direto</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+
+  </head>
+  <body>
+    <main>
+      <div class="container wow fadeInDown" data-wow-duration='2s'>
+        <div class="row text-center text-uppercase">
+          <div class="col-md-12">
+              <h1 class="title-super">Simulador</h1>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-12">
+              <h2 class="text-thin">Compare o retorno do investimento em Tesouro Direto com a Poupança</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <hr id="linha">
+          </div>
+        </div>
+          <form class="form-inline text-center" id="form-opcao">
+            <label class="radio-inline">
+              <input class="input-option" type="radio" name="produto-escolhido" value="selic"> <span>SELIC</span>
+            </label>
+            <label class="radio-inline">
+              <input class="input-option" type="radio" name="produto-escolhido" value="ipca" checked > <span>IPCA</span>
+            </label>
+            <label class="radio-inline">
+              <input class="input-option" type="radio" name="produto-escolhido" value="poupanca" > <span>POUPANÇA</span>
+            </label>
+            <div class="form-grup posicionamento-range">
+              <label class="radio-inline" for="range-investimento">VALOR DO INVESTIMENTO: <span class="range-input" id="valor-investimento"></span> </label>
+              <input id="range-investimento" type="range" min="500" max="5000" step="500" value="2500" >
+            </div>
+            <div class="form-grup posicionamento-range">
+              <label class="radio-inline" for="range-duracao-investimento">DURACAO DO INVESTIMENTO: <span class="range-input" id="tempo-investimento"></span> </label>
+              <input id="range-duracao-investimento" type="range" min="3" max="24" step="3" value="12" >
+            </div>
+          </form>
+
+          <div class="row text-center">
+            <div class="col-md-12">
+                <button class="btn btn-default wow fadeInDown" id="btn-calcular" data-wow-duration = "2s">Simular</button>
+            </div>
+          </div>
+
+          <div class="row text-center">
+              <div class="col-md-12">
+                  <span id="resultado"></span>
+              </div>
+          </div>
+
+        </div>
+    </main>
+
+    <footer class="container-fluid">
+      <div class="text-rodape">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p> &copy; 2017 Todos os direitos reservados</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>Desenvolvido por: Daleth Meira, Emerson Henrique e Sávio Raires</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/resumeBuilder.js"></script>
+     <script type="text/javascript" src="js/aplication.js"></script>
+    <script>
+      $(function (){
+        new WOW().init();
+      });
+   </script>
+
+  </body>
+</html>
